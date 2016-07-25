@@ -44,16 +44,19 @@
                             <constraint firstAttribute="trailingMargin" secondItem="fPM-t8-nZw" secondAttribute="trailing" constant="-20" id="ygk-YX-zzD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hoM-g3-TJH"/>
+                    <navigationItem key="navigationItem" id="hoM-g3-TJH">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="4I1-I6-ABy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wRL-MS-419"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="988" y="741"/>
         </scene>
-        <!--View Controller-->
+        <!--Detailed View Controller-->
         <scene sceneID="5gv-ub-c7c">
             <objects>
-                <viewController id="oXl-U5-f5U" sceneMemberID="viewController">
+                <viewController id="oXl-U5-f5U" customClass="DetailedViewController" customModule="College_Profile_Builder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oIZ-NI-KGA"/>
                         <viewControllerLayoutGuide type="bottom" id="IWY-uJ-OfM"/>
