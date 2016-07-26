@@ -34,6 +34,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="oWW-ad-Ia4"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="NeE-YX-bPc"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -46,8 +50,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="hoM-g3-TJH">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="4I1-I6-ABy"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wRL-MS-419"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wRL-MS-419">
+                            <connections>
+                                <action selector="onTappedPlusButton:" destination="BYZ-38-t0r" id="vkG-K4-mra"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editButton" destination="4I1-I6-ABy" id="V6Z-JR-txb"/>
+                        <outlet property="tableView" destination="fPM-t8-nZw" id="WUZ-vV-3vD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
