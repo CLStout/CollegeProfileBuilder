@@ -18,9 +18,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         editButton.tag = 0
-        colleges.append(College(name: "Northwestern", location: "IL", enrollment: 20336, image: UIImage(named: "Northwestern")!))
-        colleges.append(College(name: "Harvey Mudd", location: "CA", enrollment: 735, image: UIImage(named: "HarveyMudd")!))
-        colleges.append(College(name: "Mossouri S&T", location: "MO", enrollment: 8889, image: UIImage(named: "MissouriST")!))
+        colleges.append(College(name: "Northwestern", location: "IL", enrollment: 20336, image: UIImage(named: "Northwestern")!, website: "http://www.northwestern.edu/"))
+        colleges.append(College(name: "Harvey Mudd", location: "CA", enrollment: 735, image: UIImage(named: "HarveyMudd")!, website: "https://www.hmc.edu/"))
+        colleges.append(College(name: "Mossouri S&T", location: "MO", enrollment: 8889, image: UIImage(named: "MissouriST")!, website: "http://www.mst.edu/"))
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
