@@ -96,7 +96,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="euU-JH-dlO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="euU-JH-dlO">
                                 <rect key="frame" x="225" y="219" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -115,26 +115,39 @@
                                     <action selector="onTappedSaveButton:" destination="oXl-U5-f5U" eventType="touchUpInside" id="hbI-1b-g8x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWw-qC-6Xn">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWw-qC-6Xn">
                                 <rect key="frame" x="428" y="285" width="60" height="30"/>
-                                <state key="normal" title="Photos"/>
+                                <state key="normal" title="Library"/>
+                                <connections>
+                                    <action selector="photoLibraryButton:" destination="oXl-U5-f5U" eventType="touchUpInside" id="OGm-OA-AI3"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hU-tU-eac">
-                                <rect key="frame" x="428" y="348" width="60" height="30"/>
-                                <state key="normal" title="Camera"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBg-n3-NGa">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBg-n3-NGa">
                                 <rect key="frame" x="383" y="219" width="46" height="30"/>
                                 <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="openSchoolWebsite:" destination="oXl-U5-f5U" eventType="touchUpInside" id="9Dw-jL-swo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hU-tU-eac">
+                                <rect key="frame" x="428" y="348" width="60" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraButton:" destination="oXl-U5-f5U" eventType="touchUpInside" id="HAI-Mz-IPn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4fX-Pr-Ju3" firstAttribute="centerX" secondItem="pHj-bs-kou" secondAttribute="centerX" id="0Tr-Tk-yrn"/>
+                            <constraint firstItem="euU-JH-dlO" firstAttribute="centerX" secondItem="pHj-bs-kou" secondAttribute="centerX" id="4wA-hb-C3Z"/>
                             <constraint firstItem="o7V-et-LpK" firstAttribute="centerX" secondItem="pHj-bs-kou" secondAttribute="centerX" id="8ZV-nR-vwt"/>
                             <constraint firstItem="flZ-Q9-kqx" firstAttribute="centerX" secondItem="pHj-bs-kou" secondAttribute="centerX" id="FtJ-jR-Zpk"/>
                             <constraint firstItem="Hre-YU-pp4" firstAttribute="centerX" secondItem="pHj-bs-kou" secondAttribute="centerX" id="Vbo-f0-y0G"/>
                             <constraint firstItem="kbt-nZ-MOU" firstAttribute="centerX" secondItem="pHj-bs-kou" secondAttribute="centerX" id="Zp5-fM-yxm"/>
+                            <constraint firstItem="rBg-n3-NGa" firstAttribute="leading" secondItem="euU-JH-dlO" secondAttribute="trailing" constant="8" id="hQz-jX-GHm"/>
+                            <constraint firstItem="XWw-qC-6Xn" firstAttribute="leading" secondItem="Hre-YU-pp4" secondAttribute="trailing" constant="8" id="uy3-6q-MjI"/>
+                            <constraint firstItem="7hU-tU-eac" firstAttribute="leading" secondItem="Hre-YU-pp4" secondAttribute="trailing" constant="8" id="xUR-XY-ibe"/>
                         </constraints>
                     </view>
                     <connections>
@@ -142,6 +155,7 @@
                         <outlet property="enrollmentTextField" destination="kbt-nZ-MOU" id="Xbe-TS-KeM"/>
                         <outlet property="imageView" destination="Hre-YU-pp4" id="mfq-mS-T75"/>
                         <outlet property="locationTextField" destination="4fX-Pr-Ju3" id="WIe-0j-3Ft"/>
+                        <outlet property="websiteTextField" destination="euU-JH-dlO" id="gHA-aR-qYp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2B2-Gj-Zyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
