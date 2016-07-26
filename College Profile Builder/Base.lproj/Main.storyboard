@@ -98,10 +98,17 @@
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hre-YU-pp4">
                                 <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="6sc-7F-LdI"/>
+                                    <constraint firstAttribute="width" constant="240" id="jAo-hr-tvx"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flZ-Q9-kqx">
                                 <rect key="frame" x="277" y="395" width="46" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onTappedSaveButton:" destination="oXl-U5-f5U" eventType="touchUpInside" id="hbI-1b-g8x"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -113,6 +120,12 @@
                             <constraint firstItem="kbt-nZ-MOU" firstAttribute="centerX" secondItem="pHj-bs-kou" secondAttribute="centerX" id="Zp5-fM-yxm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collegeTextField" destination="o7V-et-LpK" id="IDg-VZ-NPM"/>
+                        <outlet property="enrollmentTextField" destination="kbt-nZ-MOU" id="Xbe-TS-KeM"/>
+                        <outlet property="imageView" destination="Hre-YU-pp4" id="mfq-mS-T75"/>
+                        <outlet property="locationTextField" destination="4fX-Pr-Ju3" id="WIe-0j-3Ft"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2B2-Gj-Zyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

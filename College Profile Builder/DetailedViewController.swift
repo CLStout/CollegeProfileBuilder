@@ -10,26 +10,23 @@ import UIKit
 
 class DetailedViewController: UIViewController {
 
+    @IBOutlet weak var collegeTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var enrollmentTextField: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
+    var college = College()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        collegeTextField.text = college.name
+        locationTextField.text = college.location
+        enrollmentTextField.text = String(college.enrollment)
+        imageView.image = college.image
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func onTappedSaveButton(sender: UIButton) {
+        college.name = collegeTextField.text!
+        college.location = locationTextField.text!
+        college.enrollment = Int(enrollmentTextField.text!)!
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
