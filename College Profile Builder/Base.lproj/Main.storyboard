@@ -49,7 +49,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hoM-g3-TJH">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="4I1-I6-ABy"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="4I1-I6-ABy">
+                            <connections>
+                                <action selector="onTappedEditButton:" destination="BYZ-38-t0r" id="evD-pG-Ky0"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wRL-MS-419">
                             <connections>
                                 <action selector="onTappedPlusButton:" destination="BYZ-38-t0r" id="vkG-K4-mra"/>
